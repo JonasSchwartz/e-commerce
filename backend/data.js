@@ -57,16 +57,16 @@ const data = {
         },
         {
             _id:"5",
-            name: "Nike fit shirt",
+            name: "Nike Shirt Blue",
             slug: "Nike-Shirt-Blue",
             category: "Shirts",
             image: "/images/p5.jpg",
             price:250,
             countInStock: 20,
             brand: "Nike",
-            rating: 4.0,
+            rating: 1,
             numReviews: 43,
-            description:"High Quality Pants"
+            description:"High Quality Shirt"
         },
 
         {

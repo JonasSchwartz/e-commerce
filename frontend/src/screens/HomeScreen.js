@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import logger from "use-reducer-logger"
 import Row from "react-bootstrap/Row"
 import Col from "react-bootstrap/Col"
-// import data from "../data";
+
 import axios from 'axios'
 import Product from "../components/product";
 import { Helmet } from "react-helmet-async";

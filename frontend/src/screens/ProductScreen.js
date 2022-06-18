@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useContext, useEffect, useReducer } from "react";
-import { useParams } from "react-router-dom"
-import Row from "react-bootstrap/esm/Row";
+import {  useParams } from "react-router-dom"
+import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import ListGroup from "react-bootstrap/ListGroup"
 import Rating from "../components/Rating";
@@ -33,6 +33,7 @@ const reducer = (state,action) => {
 
 
 function ProductScreen () {
+    
 const params = useParams();
 const  {slug} = params;
 
@@ -73,6 +74,8 @@ ctxDispatch({
 }
 
 
+
+
 return loading? (
     <LoadingBox/>
 ) : error? (
@@ -104,9 +107,9 @@ return loading? (
               numReviews={product.numReviews}
             ></Rating>
         </ListGroup.Item>
-        <ListGroup.Item> Price : {product.price} sek</ListGroup.Item>
+        <ListGroup.Item> Pris : {product.price} sek</ListGroup.Item>
            
-        <ListGroup.Item> Description:
+        <ListGroup.Item> Beskrivning:
             <p>{product.description}</p>
         </ListGroup.Item>
 
@@ -119,7 +122,7 @@ return loading? (
             <ListGroup variant="flush">
                 <ListGroup.Item>
                     <Row>
-                        <Col>Price:</Col>
+                        <Col>Pris:</Col>
                         <Col>{product.price} sek</Col>
                     </Row>
                 </ListGroup.Item>
@@ -127,7 +130,7 @@ return loading? (
                     <Row>
                         <Col>status:</Col>
                         <Col>{product.countInStock>0?
-                        <Badge bg="success">I lager</Badge>
+                        <Badge bg="success">I lager {product.countInStock}st</Badge>
                             :
                             <Badge bg="danger">Ej tillgänglig</Badge>
                     } </Col>

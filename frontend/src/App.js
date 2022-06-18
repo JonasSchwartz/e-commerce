@@ -7,8 +7,9 @@ import Container from "react-bootstrap/Container"
 import {LinkContainer} from "react-router-bootstrap"
 import Badge from "react-bootstrap/esm/Badge";
 import Nav from "react-bootstrap/Nav"
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Store } from "./Store";
+import CartScreen from "./screens/CartScreen";
 
 
 function App() {
@@ -25,9 +26,9 @@ function App() {
             </LinkContainer>
             <Nav className="me-auto  w-100  justify-content-end">
                   <Link to="/cart" className="nav-link">
-                    Cart
+                    Kundvagn
                     {cart.cartItems.length > 0 && (
-                      <Badge pill bg="danger">
+                      <Badge pill bg="success">
                               {cart.cartItems.reduce((a, c) => a + c.quantity, 0)}
                       </Badge>
                     )}
@@ -43,12 +44,13 @@ function App() {
     <Container className="mt-3">
       <Routes>
         <Route path="/product/:slug" element={< ProductScreen />} />
+        <Route path="/cart" element={<CartScreen/>} />
         <Route path="/" element={<HomeScreen/>} />
       </Routes>
     </Container>
     </main>
     <footer>
-      <div className="text-center">All rights reserved to Jonas Schwartz</div>
+      <div className="text-center bg-light">All rights reserved to Ⓒ Jonas_Schwartz@hotmail.com</div>
     </footer>
     </div>
     </BrowserRouter>
