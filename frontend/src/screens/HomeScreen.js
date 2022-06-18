@@ -52,7 +52,7 @@ fetchData();
         <Helmet>
             <title>Jonas Nätbuik</title>
         </Helmet>
-            <h1 className="">Nyheter</h1>
+            <h1 className="nyheter-text">Nyheter</h1>
 
 <div className="products">
 {
