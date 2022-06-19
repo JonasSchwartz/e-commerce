@@ -109,11 +109,11 @@ const checkOutHandler = () => {
                         <Card.Body>
                             <ListGroup variant="flush">
                                 <ListGroup.Item>
-                                    <h3>Totalt:
+                                    <h4>Totalt:
                            ({cartItems.reduce((a,c) => a+c.quantity, 0)}
-                            Produkter): 
+                            {' '}Produkter): 
                             {cartItems.reduce((a,c) => a+c.price * c.quantity, 0)} kr
-                                        </h3>
+                                        </h4>
                                 </ListGroup.Item>
                             <ListGroup.Item>
                                 <div className="d-grid">
