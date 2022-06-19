@@ -24,7 +24,7 @@ function App() {
             <LinkContainer to="/">
             <Navbar.Brand>Jonas nätbutik</Navbar.Brand>
             </LinkContainer>
-            <Nav className="me-auto  w-100  justify-content-end">
+            <Nav className="me-auto  w-100  justify-content-start">
                   <Link to="/cart" className="nav-link">
                     Kundvagn
                     {cart.cartItems.length > 0 && (

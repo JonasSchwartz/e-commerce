@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useContext, useEffect, useReducer } from "react";
-import {  useParams } from "react-router-dom"
+import {  Navigate, useParams } from "react-router-dom"
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import ListGroup from "react-bootstrap/ListGroup"
@@ -63,6 +63,8 @@ const addToCartHandler = async () => {
  const existItem = cart.cartItems.find((x) =>x._id === product._id)
  const quantity = existItem ? existItem.quantity + 1 : 1
  const { data } = await axios.get(`/api/products/${product._id}`)
+
+
 if (data.countInStock < quantity) {
     window.alert("Sorry, Product is out of stock");
     return;
@@ -130,7 +132,7 @@ return loading? (
                     <Row>
                         <Col>status:</Col>
                         <Col>{product.countInStock>0?
-                        <Badge bg="success">I lager {product.countInStock}st</Badge>
+                        <Badge bg="success"> {product.countInStock}st i lager</Badge>
                             :
                             <Badge bg="danger">Ej tillgänglig</Badge>
                     } </Col>

@@ -58,20 +58,5 @@ main {
   text-align: center;
   
 }
-.fa-trash {
-  
-  color:red;
-  font-size: 1rem;
-}
 
-.fa-plus-circle {
-  color: green;
-}
-.fa-minus-circle {
-  color: red;
-  
-}
-.fa-minus-circle:hover {
-  cursor: pointer;
-  
-}
+
