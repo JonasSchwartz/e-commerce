@@ -1,7 +1,7 @@
 const data = {
     products: [
         {
-            _id:'1',
+            
             name: "Nike Slim Shirt",
             slug: "Nike-Slim-Shirt",
             category: "Shirts",
@@ -15,7 +15,7 @@ const data = {
         },
 
         {
-            _id:"2",
+            
             name: "Nike fit Shirt",
             slug: "Nike-fit-Shirt",
             category: "Shirts",
@@ -29,7 +29,7 @@ const data = {
         },
 
         {
-            _id:"3",
+            
             name: "Nike slim pants",
             slug: "Nike-Slim-Pants",
             category: "Pants",
@@ -43,7 +43,7 @@ const data = {
         },
 
         {
-            _id:'4',
+            
             name: "Nike fit pants",
             slug: "Nike-fit-Pants",
             category: "Pants",
@@ -56,7 +56,7 @@ const data = {
             description:"High Quality Pants"
         },
         {
-            _id:"5",
+            
             name: "Nike Shirt Blue",
             slug: "Nike-Shirt-Blue",
             category: "Shirts",
@@ -70,7 +70,7 @@ const data = {
         },
 
         {
-            _id:"6",
+            
             name: "Nike Shirt Grey Hoodie",
             slug: "Nike-Shirt-Grey-Hoodie",
             category: "Shirts",
@@ -84,7 +84,7 @@ const data = {
         },
 
         {
-            _id:"7",
+            
             name: "Nike Jacket Orange ",
             slug: "Nike-Jacket-Orange",
             category: "Pants",
@@ -97,7 +97,7 @@ const data = {
             description:"High Quality Pants"
         },
         {
-            _id:"8",
+            
             name: "Nike jacket Green",
             slug: "Nike-Jacket-Green",
             category: "Jackets",
