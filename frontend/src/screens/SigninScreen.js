@@ -4,7 +4,7 @@ import {Link, useLocation, useNavigate } from "react-router-dom";
 import Container from "react-bootstrap/Container"
 import Form from "react-bootstrap/Form"
 import axios from "axios";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Store } from "../Store";
 
 export default function SigninScreen() {
@@ -17,7 +17,7 @@ export default function SigninScreen() {
     const[password,setPassword] = useState('')
 
 const {state, dispatch: ctxDispatch} = useContext(Store)
-
+const {userInfo} = state;
 
 
     const submitHandler = async (e) => {
@@ -33,7 +33,13 @@ const {state, dispatch: ctxDispatch} = useContext(Store)
             } catch (err) {
                 alert('Ogiltigt lösenord eller E-post')
             }
-    }
+    };
+
+    useEffect(()=> {
+        if(userInfo) {
+            navigate(redirect);
+        }
+    },{navigate,redirect, userInfo});
 
     return (
     <Container className="small-container">
