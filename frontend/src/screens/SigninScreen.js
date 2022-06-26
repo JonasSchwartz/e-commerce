@@ -6,6 +6,8 @@ import Form from "react-bootstrap/Form"
 import axios from "axios";
 import { useContext, useEffect, useState } from "react";
 import { Store } from "../Store";
+import { toast } from "react-toastify";
+import { getError } from "../utils";
 
 export default function SigninScreen() {
     const navigate = useNavigate();
@@ -31,7 +33,7 @@ const {userInfo} = state;
             localStorage.setItem('userInfo', JSON.stringify(data));
             navigate(redirect || '/');
             } catch (err) {
-                alert('Ogiltigt lösenord eller E-post')
+                toast.error(getError(err));
             }
     };
 
@@ -39,7 +41,7 @@ const {userInfo} = state;
         if(userInfo) {
             navigate(redirect);
         }
-    },{navigate,redirect, userInfo});
+    },[navigate,redirect, userInfo]);
 
     return (
     <Container className="small-container">
