@@ -13,7 +13,8 @@ const data = {
             email:'hanna@test.se',
             password: bcrypt.hashSync('123456'),
             isAdmin: false,
-           }
+           },
+         
 
 
     ],
