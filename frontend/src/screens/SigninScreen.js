@@ -44,7 +44,7 @@ const {userInfo} = state;
     },[navigate,redirect, userInfo]);
 
     return (
-    <Container className="small-container">
+    <Container className="container small-container">
 
         <Helmet>
             <title>Logga In</title>
