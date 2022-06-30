@@ -53,7 +53,7 @@ useEffect(() =>{
 
   return <div>
     <Helmet>
-        <title>Shipping Adress</title>
+        <title>Leveransadress</title>
     </Helmet>
 
     <CheckoutSteps step1 step2 ></CheckoutSteps>
@@ -65,7 +65,7 @@ useEffect(() =>{
 
     <Form onSubmit={submitHandler}>
     <Form.Group className="mb-3" controlId="Fullname">
-    <Form.Label>Full Name</Form.Label>
+    <Form.Label>Namn</Form.Label>
     <Form.Control
     value={fullName}
     onChange={(e) => setFullName(e.target.value)}
@@ -75,7 +75,7 @@ useEffect(() =>{
     </Form.Group>
 
     <Form.Group className="mb-3" controlId="Fullname">
-    <Form.Label>adress</Form.Label>
+    <Form.Label>Adress</Form.Label>
     <Form.Control
     value={address}
     onChange={(e) => setAddress(e.target.value)}
@@ -85,7 +85,7 @@ useEffect(() =>{
     </Form.Group>
     
     <Form.Group className="mb-3" controlId="Fullname">
-    <Form.Label>stad</Form.Label>
+    <Form.Label>Stad</Form.Label>
     <Form.Control
     value={city}
     onChange={(e) => setCity(e.target.value)}
@@ -94,7 +94,7 @@ useEffect(() =>{
 
     </Form.Group>
     <Form.Group className="mb-3" controlId="Fullname">
-    <Form.Label>postalcode</Form.Label>
+    <Form.Label>Postnummer</Form.Label>
     <Form.Control
     value={postalCode}
     onChange={(e) => setPostalCode(e.target.value)}
@@ -104,7 +104,7 @@ useEffect(() =>{
     </Form.Group>
 
     <Form.Group className="mb-3" controlId="Fullname">
-    <Form.Label>Country</Form.Label>
+    <Form.Label>Land</Form.Label>
     <Form.Control
     value={country}
     onChange={(e) => setCountry(e.target.value)}
@@ -116,7 +116,7 @@ useEffect(() =>{
     <Form.Group>
         <div className='mb-3'>
             <Button variant="primary" type="submit">
-                Continue
+                Fortsätt
             </Button>
         </div>
     </Form.Group>

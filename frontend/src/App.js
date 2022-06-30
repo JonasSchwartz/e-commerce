@@ -36,7 +36,7 @@ function App() {
             <LinkContainer to="/">
             <Navbar.Brand>Jonas nätbutik</Navbar.Brand>
             </LinkContainer>
-            <Nav className="me-auto  w-100  justify-content-start">
+            <Nav className="me-auto  w-100  justify-content-end">
                   <Link to="/cart" className="nav-link">
                     Kundvagn
                     {cart.cartItems.length > 0 && (
@@ -71,7 +71,7 @@ function App() {
                     </NavDropdown>
                    ):(
                     <Link className="nav-link" to="/signin">
-                    Sign In
+                    Logga In
                     </Link>
                    )}
 
@@ -93,7 +93,7 @@ function App() {
     </Container>
     </main>
     <footer>
-      <div className="text-center bg-light">All rights reserved to Ⓒ Jonas_Schwartz@hotmail.com</div>
+      <div className="text-center bg-light"> Ⓒ Jonas Schwartz</div>
     </footer>
     </div>
     </BrowserRouter>

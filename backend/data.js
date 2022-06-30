@@ -99,7 +99,7 @@ const data = {
             brand: "Nike",
             rating: 4.5,
             numReviews: 4,
-            description:"High Quality Pants"
+            description:"High Quality hoodie from Nike"
         },
 
         {
@@ -113,7 +113,7 @@ const data = {
             brand: "Nike",
             rating: 3.5,
             numReviews: 12,
-            description:"High Quality Pants"
+            description:"High Quality jacket from Nike"
         },
         {
             

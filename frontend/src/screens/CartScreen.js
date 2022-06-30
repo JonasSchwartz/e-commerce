@@ -66,11 +66,11 @@ const checkOutHandler = () => {
                                             
                                             ></img> {" "}
                                             
-                                           <Link to={`/product/${item.slug}`}> {item.name}</Link>
+                                           <Link className="color-dark text-dark text-decoration-none text-uppercase "  to={`/product/${item.slug}`}> {item.name}</Link>
                                             
                                         </Col>
                                         <Col md={3}>
-                                        <Button variant="light" 
+                                        <Button  variant="light" 
                                         onClick={() => updateCartHandler(item, item.quantity -1)}
                                         disabled={item.quantity === 1}>
                                             <i className="fas fa-minus-circle"></i>
@@ -117,7 +117,8 @@ const checkOutHandler = () => {
                                 </ListGroup.Item>
                             <ListGroup.Item>
                                 <div className="d-grid">
-                                    <Button
+                                    <Button className="bg-dark border-light"
+                                    
                                     type="button"
                                     variant="primary"
                                     onClick={checkOutHandler}

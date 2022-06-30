@@ -35,7 +35,7 @@ const addToCartHandler = async (item) => {
 <Link to={`/product/${product.slug}`}>
 <img src={product.image} className="card-img-top" alt={product.name}/>
 </Link>
-<Card.Body>
+<Card.Body className="bg-light">
    <Link to={`/product/${product.slug}`}>
   <Card.Title> {product.name} </Card.Title>
 </Link> 
@@ -46,7 +46,7 @@ const addToCartHandler = async (item) => {
 disabled>Slutsåld
 </Button> 
  ) : (
-<Button onClick={()=>addToCartHandler(product)}>Lägg till</Button>
+<Button className="bg-dark border-light"  onClick={()=>addToCartHandler(product)}>Lägg till</Button>
  )}
 </Card.Body>
 
