@@ -27,6 +27,8 @@ const {userInfo} = state;
 
     const submitHandler = async (e) => {
         e.preventDefault(); 
+        
+
         if(password !== confirmPassword) {
             toast.error('Lösenordet matchar inte')
             return;
@@ -41,7 +43,7 @@ const {userInfo} = state;
             localStorage.setItem('userInfo', JSON.stringify(data));
             navigate(redirect || '/');
             } catch (err) {
-                toast.error(getError(err));
+                toast.error('Din emailaddress är redan registrerad');
             }
     };
 
