@@ -16,14 +16,18 @@ import CartScreen from "./screens/CartScreen";
 import SigninScreen from "./screens/SigninScreen";
 import ShippingAddressScreen from "./screens/ShippingAddressScreen";
 import SignUpScreen from "./screens/SignupScreen";
+import PaymentMethodScreen from "./screens/PaymentMethodScreen";
+
 
 function App() {
   const {state, dispatch: ctxDispatch} = useContext(Store);
   const {cart, userInfo} = state
+  
   const signoutHandler = () => {
     ctxDispatch({type: 'USER_SIGNOUT'})
     localStorage.removeItem('userInfo')
     localStorage.removeItem('shippingAddress')
+    localStorage.removeItem('paymentMethod')
   }
 
   return (
@@ -56,6 +60,13 @@ function App() {
                           <NavDropdown.Item>Orderhistorik</NavDropdown.Item>
 
                         </LinkContainer>
+                        <LinkContainer to="/contactscreen">
+                          <NavDropdown.Item>Kontakta oss</NavDropdown.Item>
+
+                        </LinkContainer>
+
+
+
                       {/* <NavDropdown.Divider/> */}
                       <Link
                       className="dropdown-item"
@@ -89,6 +100,7 @@ function App() {
         <Route path="/" element={<HomeScreen/>} />
         <Route path="/signin" element={<SigninScreen/>} />
         <Route path="/signup" element={<SignUpScreen/>} />
+        <Route path="/payment" element={<PaymentMethodScreen/>} />
         <Route path="/shipping" element={<ShippingAddressScreen/>}></Route>
       </Routes>
     </Container>

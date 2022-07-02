@@ -56,6 +56,8 @@ main {
 }
 .nyheter-text {
   text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
   
 }
 
