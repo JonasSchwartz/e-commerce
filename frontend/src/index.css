@@ -51,9 +51,7 @@ main {
   max-width: 100%;
 }
 
-.img-thumbnail {
-  height: 80px;
-}
+
 .nyheter-text {
   text-align: center;
   font-weight: bold;
