@@ -19,6 +19,8 @@ import SignUpScreen from "./screens/SignupScreen";
 import PaymentMethodScreen from "./screens/PaymentMethodScreen";
 import PlaceOrderScreen from "./screens/PlaceOrderScreen";
 import OrderScreen from "./screens/orderScreen";
+import OrderHistoryScreen from "./screens/OrderHistoryScreen";
+import NavbarCollapse from "react-bootstrap/esm/NavbarCollapse";
 
 function App() {
   const {state, dispatch: ctxDispatch} = useContext(Store);
@@ -36,11 +38,14 @@ function App() {
     <div className="d-flex flex-column site-container">
       <ToastContainer position="top-center" limit={1} />
       <header >
-        <Navbar bg="dark" variant="dark">
+        <Navbar bg="dark" variant="dark" expand="lg" >
           <Container>
             <LinkContainer to="/">
             <Navbar.Brand>Jonas nätbutik</Navbar.Brand>
             </LinkContainer>
+            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <Navbar.Collapse id="basic-navbar-nav">
+            
             <Nav className="me-auto  w-100  justify-content-end">
                   <Link to="/cart" className="nav-link">
                     Kundvagn
@@ -88,6 +93,7 @@ function App() {
                    )}
 
                     </Nav>
+                    </Navbar.Collapse>
           </Container>
         </Navbar>
         
@@ -105,6 +111,7 @@ function App() {
         <Route path="/placeorder" element={<PlaceOrderScreen/>} />
         <Route path="/order/:id" element={<OrderScreen/>}></Route>
         <Route path="/shipping" element={<ShippingAddressScreen/>}></Route>
+        <Route path="/orderhistory" element={<OrderHistoryScreen/>}></Route>
       </Routes>
     </Container>
     </main>
