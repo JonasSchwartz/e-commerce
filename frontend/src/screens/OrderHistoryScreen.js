@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios'
 import { getError } from '../utils'
 import Button from "react-bootstrap/Button"
-
+import Table from "react-bootstrap/Table"
 
 
 const reducer = (state,action) => {
@@ -66,7 +66,9 @@ fetchData();
     ) : error ?(
         <MessageBox variant="danger">{error}</MessageBox>
     ): (
-        <table className='table' >
+
+        
+        <Table responsive="md" >
             
             <thead>
 
@@ -89,7 +91,7 @@ fetchData();
                         <td>{order.isPaid ? order.paidAt.substring(0,10) : 'Nej'}</td>
                         <td>{order.isDelivered ? order.isDelivered.substring(0,10): 'Nej'}
                         </td>
-                        <td>
+                        <td responsive="md">
                             <Button
                                 type='Button'
                                 variant="light"
@@ -103,7 +105,7 @@ fetchData();
                     </tr>
                 ))}
             </tbody>
-        </table>
+        </Table>
     )}
   
 

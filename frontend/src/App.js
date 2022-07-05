@@ -21,6 +21,7 @@ import PlaceOrderScreen from "./screens/PlaceOrderScreen";
 import OrderScreen from "./screens/orderScreen";
 import OrderHistoryScreen from "./screens/OrderHistoryScreen";
 import NavbarCollapse from "react-bootstrap/esm/NavbarCollapse";
+import ProfileScreen from "./screens/ProfileScreen";
 
 function App() {
   const {state, dispatch: ctxDispatch} = useContext(Store);
@@ -31,6 +32,7 @@ function App() {
     localStorage.removeItem('userInfo')
     localStorage.removeItem('shippingAddress')
     localStorage.removeItem('paymentMethod')
+    window.location.href='/signin'
   }
 
   return (
@@ -107,6 +109,7 @@ function App() {
         <Route path="/" element={<HomeScreen/>} />
         <Route path="/signin" element={<SigninScreen/>} />
         <Route path="/signup" element={<SignUpScreen/>} />
+        <Route path="/profile" element={<ProfileScreen/>} />
         <Route path="/payment" element={<PaymentMethodScreen/>} />
         <Route path="/placeorder" element={<PlaceOrderScreen/>} />
         <Route path="/order/:id" element={<OrderScreen/>}></Route>
