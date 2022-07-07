@@ -143,7 +143,7 @@ return loading? (
                             <ListGroup.Item>
                                 <div className="d-grid">
                                     <Button onClick={addToCartHandler} className="bg-dark border-none" variant="primary">
-                                        Lägg till
+                                        Köp
                                     </Button>
                                 </div>
                             </ListGroup.Item>

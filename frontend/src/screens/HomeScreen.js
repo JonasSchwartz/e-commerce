@@ -1,5 +1,5 @@
-import { useEffect,useReducer, useState } from "react";
-import { Link } from "react-router-dom";
+import { useEffect,useReducer } from "react";
+
 import logger from "use-reducer-logger"
 import Row from "react-bootstrap/Row"
 import Col from "react-bootstrap/Col"
@@ -9,6 +9,7 @@ import Product from "../components/product";
 import { Helmet } from "react-helmet-async";
 import LoadingBox from "../components/LoadingBox";
 import MessageBox from "../components/MessageBox";
+
 
 const reducer = (state,action) => {
     switch(action.type) {
@@ -52,7 +53,8 @@ fetchData();
         <Helmet>
             <title>Jonas Nätbuik</title>
         </Helmet>
-            <h1 className="nyheter-text">Nyheter</h1>
+        
+            <h1 className="nyheter-text">Nyheter </h1>
 
 <div className="products">
 {
