@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useContext, useEffect, useReducer } from "react";
-import {  Navigate, useParams } from "react-router-dom"
+import {   useParams } from "react-router-dom"
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import ListGroup from "react-bootstrap/ListGroup"
