@@ -26,6 +26,7 @@ import Button from "react-bootstrap/Button";
 import { getError } from "./utils";
 import axios from "axios";
 import SearchBox from "./components/SearchBox";
+import SearchScreen from "./screens/SearchScreen";
 
 
 function App() {
@@ -170,6 +171,7 @@ fetchCategories();
         <Route path="/signin" element={<SigninScreen/>} />
         <Route path="/signup" element={<SignUpScreen/>} />
         <Route path="/profile" element={<ProfileScreen/>} />
+        <Route path="/search" element={<SearchScreen/>} />
         <Route path="/payment" element={<PaymentMethodScreen/>} />
         <Route path="/placeorder" element={<PlaceOrderScreen/>} />
         <Route path="/order/:id" element={<OrderScreen/>}></Route>
